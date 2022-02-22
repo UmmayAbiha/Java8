@@ -54,7 +54,7 @@ public class Solution{
         System.out.println(emp.stream()
                 .filter(salary -> salary.getSalary()< 5000)
                 .filter(city -> city.getCity().equals("Delhi"))
-                .map(name -> name.getFullname().split(" ")[0])
+                .map(name -> name.getFullname().split(" ")[0]).distinct()
                 .collect(Collectors.toList()));
     }
 }
